@@ -1,8 +1,6 @@
 import { Component } from "@angular/core";
-interface Personaje{
-  nombre:string;
-  poder:number;
-}
+import { Personaje } from "../interfaces/dbz.interface";
+
 
 @Component({
   selector: 'app-main-page',
@@ -31,6 +29,13 @@ poder:7500}
    return;
   }
     console.log(this.nuevo);
+   
+
+    this.personajes.push(this.nuevo);
+    this.nuevo={
+      nombre:'',
+      poder:0
+    }
 
   }
 }
