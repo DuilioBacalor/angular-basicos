@@ -18,25 +18,12 @@ export class MainPageComponent  {
 },{nombre:'Vegeta',
 poder:7500}
   ];
-
-  
   nuevo:Personaje={
-    nombre:"",
-    poder:0
-  }
-  agregar(){
-    if(this.nuevo.nombre.trim().length===0){
-   return;
-  }
-    console.log(this.nuevo);
-   
+    nombre:'Maestro Roshi',
+  poder:1000  }
 
-    this.personajes.push(this.nuevo);
-    this.nuevo={
-      nombre:'',
-      poder:0
-    }
-
+  agregarNuevoPersonaje(argumento:Personaje){
+this.personajes.push(argumento);
   }
 }
 
